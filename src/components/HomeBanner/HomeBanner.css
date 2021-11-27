@@ -1,0 +1,28 @@
+/* .header-img-banner {
+    width: 100%;
+    height: 880px;
+} */
+
+.home-banner {
+    overflow: hidden;
+}
+
+.home-banner-slideshow {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.home-banner-slide {
+    min-width: 100%;
+    overflow: hidden;
+    transition: .3s ease all;
+    z-index: 9;
+    max-height: 800px;
+    position: relative; /* Importante para acomodar un texto encima de la foto de ser necesario */
+}
+
+.home-banner-slide img {
+    width: 100%;
+    height: 880px;
+}
+
