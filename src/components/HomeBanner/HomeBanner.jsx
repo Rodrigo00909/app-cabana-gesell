@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import BannerCabañaGesell from '../../assets/Banner-Cabana-Gesell.jpg';
 import Banner2 from '../../assets/naomi-hebert-MP0bgaS_d1c-unsplash.jpg';
@@ -15,6 +15,8 @@ const HomeBanner = () => {
     /* Hook useRef */
     // Guarda el valor en una referencia (y no estado) para no perder la posición de la foto x mas q se renderize la app
     const slideshow = useRef(null);
+
+    const intervaloSlideshow = useRef(null);
     /* // Hook useRef */
 
     const RightSlide = () => {
@@ -46,7 +48,6 @@ const HomeBanner = () => {
     }
 
     const LeftSlide = () => {
-        console.log("Anterior");
         if (slideshow.current.children.length > 0) {
 
             const index = slideshow.current.children.length - 1;
@@ -66,6 +67,24 @@ const HomeBanner = () => {
 
         }
     }
+
+    /* Hook useEffect */
+    useEffect(() => {
+        intervaloSlideshow.current = setInterval(() => {
+            RightSlide();
+        }, 5000);
+
+        slideshow.current.addEventListener('mouseenter', () => {
+            clearInterval(intervaloSlideshow.current);
+        });
+
+        slideshow.current.addEventListener('mouseleave', () => {
+            intervaloSlideshow.current = setInterval(() => {
+                RightSlide();
+            }, 5000);
+        });
+    }, []); // Se refrezca cada vez que ocurra una act
+    /* // Hook useEffect */
 
     return (
         <div className='home-banner'>
