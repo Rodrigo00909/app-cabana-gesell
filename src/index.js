@@ -18,8 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const rootNode = document.getElementById('root');
 ReactDOM.render(
-    <BrowserRouter>
         <App />
-    </BrowserRouter>, rootNode
+    , rootNode
 );
 

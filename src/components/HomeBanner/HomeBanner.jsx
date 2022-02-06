@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
-import BannerCabañaGesell from '../../assets/Banner-Cabana-Gesell.jpg';
-import Banner2 from '../../assets/naomi-hebert-MP0bgaS_d1c-unsplash.jpg';
-import Banner3 from '../../assets/ralph-ravi-kayden-2d4lAQAlbDA-unsplash.jpg';
-import Banner4 from '../../assets/scott-webb-1ddol8rgUH8-unsplash.jpg';
+import BannerCabañaGesell from '../../assets/FotosBanner/IMG_6426.JPEG';
+import Banner2 from '../../assets/FotosBanner/IMG_6426.JPEG';
+import Banner3 from '../../assets/FotosBanner/IMG_6662.JPEG';
+import Banner4 from '../../assets/FotosBanner/IMG_6667.JPEG';
 
 import { ReactComponent as FlechaIz } from '../../assets/iconmonstr-angel-left-thin.svg';
 import { ReactComponent as FlechaDer } from '../../assets/iconmonstr-angel-right-thin.svg';
@@ -69,10 +69,10 @@ const HomeBanner = () => {
     }
 
     /* Hook useEffect */
-    useEffect(() => {
+    /*useEffect(() => {
         intervaloSlideshow.current = setInterval(() => {
             RightSlide();
-        }, 5000);
+        }, 9000);
 
         slideshow.current.addEventListener('mouseenter', () => {
             clearInterval(intervaloSlideshow.current);
@@ -81,7 +81,7 @@ const HomeBanner = () => {
         slideshow.current.addEventListener('mouseleave', () => {
             intervaloSlideshow.current = setInterval(() => {
                 RightSlide();
-            }, 5000);
+            }, 9000);
         });
     }, []); // Se refrezca cada vez que ocurra una act
     /* // Hook useEffect */

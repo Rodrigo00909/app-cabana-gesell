@@ -1,20 +1,34 @@
 import * as React from "react";
-import { useRoutes } from "react-router-dom";
-
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet
+} from "react-router-dom";
 import Home from './pages/Home/Home';
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import Login from "./pages/login/login";
+import Register from "./pages/register/register";
+import Reservas from './components/Reservas/Reservas';
+import Navbar from './components/Navbar/Navbar';
 
 import './App.css';
 
 
 function App() {
-    let element = useRoutes([
-        {path : '/', element : <Home/>},
-        {path : '/login', element : <Login/>},
-        {path : '/register', element : <Register/>},
-    ])
-    return element
+
+  return (
+    <>
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Reservas" element={<Reservas/>} />
+            <Route path="/Login" element={<Login />} />
+            <Route path="/Register" element={<Register/>} />
+        </Routes>
+    </BrowserRouter>
+  </>
+  )
 }
 
 /* function App() {

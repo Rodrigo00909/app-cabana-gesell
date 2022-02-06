@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+.calendar{
+    padding: 20px 40px !important;
+}
+.months-container{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 40px !important;
+}
+
+.calendar .months-container .month-container{
+    background: #ffff ;
+    padding: 20px !important;
+    min-width: 280px !important;
+    height: auto !important;
+    box-shadow: 15px 15px 40px rgba(0,0,0,.15) !important;
+}
+
+.calendar table.month th.month-title{
+    color: #5a8990;
+    font-size: 1.9em;
+    font-weight: 200;
+    font-family: 'Dancing Script', cursive;
+}

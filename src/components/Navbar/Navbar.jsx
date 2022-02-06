@@ -1,6 +1,6 @@
 import React from 'react';
-
-import LogoCabañaGesell from '../../assets/LogoText-Cabana-Gesell2.png';
+import { NavLink } from "react-router-dom";
+import LogoCabañaGesell from '../../assets/cabaña-gesel.svg';
 
 import './Navbar.css';
 
@@ -14,9 +14,10 @@ const Navbar = () => {
                             <img className="navbar-logo-img" src={LogoCabañaGesell} alt="Logo Cabaña Gesell" />
                         </div>
                         <div className="navbar-menu">
-                            <a href="#">Home</a>
-                            <a href="#">Contact</a>
-                            <a href="#">About</a>
+                            <NavLink className="nav-item" to="/Home">Home</NavLink>
+                            <NavLink className="nav-item" to="/Reservas">Reservas</NavLink>
+                            <NavLink className="nav-item" to="/Login">Login</NavLink>
+                            <NavLink className="nav-item" to="/Register">Register</NavLink>
                         </div>
                     </div>
                 </div>
